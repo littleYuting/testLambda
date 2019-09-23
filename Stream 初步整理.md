@@ -1,7 +1,8 @@
 # Stream 学习整理
-
+[引言](#1)
 ------
 
+<span id="1">## 1. 引言</span>
 ## 1. 引言
 ### 1.1 应用
 - 对集合（Collection）对象功能的增强，提供串行和并行两种模式进行聚合操作（aggregate operation）；
