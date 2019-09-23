@@ -13,7 +13,7 @@
 - [参考文献](#4)
 ------
 
-##<span id = "1">1. 引言</span>
+## <span id = "1">1. 引言</span>
 ### 1.1 应用
 - 对集合（Collection）对象功能的增强，提供串行和并行两种模式进行聚合操作（aggregate operation）；
 - 借助 Lambda 进行大批量数据操作(bulk data operation)  ； 
