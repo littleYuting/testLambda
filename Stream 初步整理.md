@@ -14,13 +14,13 @@
 ------
 
 ## <span id = "1">1. 引言</span>
-### 1.1 应用
+### <span id = "1.1">1.1 应用</span>
 - 对集合（Collection）对象功能的增强，提供串行和并行两种模式进行聚合操作（aggregate operation）；
 - 借助 Lambda 进行大批量数据操作(bulk data operation)  ； 
 - 补充：
     - 并行模式通过 fork/join 框架实现， 即 Stream API 实现了高性能的并发程序的封装；
     - import：java.util.stream；
-### 1.2 特性
+### <span id = "1.2">1.2 特性</span>
 - Stream 非集合元素，非数据结构，用操作管道从 source（Collection、数组、generator function、IO channel）抓取数据且数据量不限；【生成方法和IO channel 之后学习】
 - 不修改其所封装的底层数据结构的数据，流操作会产生新 Stream；
 - 所有 Stream 的操作必须以 lambda 表达式为参数；
@@ -31,8 +31,8 @@
     - Iterator 只能显示地通过命令式执行串行化操作，而 Stream 可并行化地隐式执行数据转换和计算；
 - ==总结==：便利、简洁、高效、强大；
 
-## 2. 流的生成 Stream Source
-### 2.1 方式
+## <span id = "2">2. 流的生成 Stream Source</span>
+### <span id = "2.1">2.1 方式</span>
 - from Collection 和数组
     - Collection.stream()
     - Collection.parallelStream()
@@ -53,18 +53,18 @@
     - Pattern.splitAsStream(java.lang.CharSequence)
     - JarFile.stream()
 
-### 2.2 Stream 的三种包装类
+### <span id = "2.2">2.2 Stream 的三种包装类</span>
 - 为三种基本数值型提供了对应的 Stream：IntStream、LongStream、DoubleStream；  
 补充：也可用 Stream<Integer>、Stream<Long> >、Stream<Double>，但 boxing 和 unboxing 会很耗时；
-## 3. 流的使用
+## <span id = "3">3. 流的使用</span>
 
-### 3.1 使用流的一般步骤
+### <span id = "3.1">3.1 使用流的一般步骤</span>
 - 获取一个数据源（source）→ 数据转换 → 执行操作获取目标结果；  
 补充：每次转换原有 Stream 对象不改变，返回一个新的 Stream ；  
 ![Stream](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
 ![通用语法](http://img04.taobaocdn.com/imgextra/i4/90219132/T2ycFgXQ8XXXXXXXXX_!!90219132.jpg)
 
-### 3.2 Stream 与其它数据结构的转换
+### <span id = "3.2">3.2 Stream 与其它数据结构的转换</span>
 -  Array  
     String[] strArray1 = stream.toArray(String[]::new);
 - Collection  
@@ -75,7 +75,7 @@
 - String  
     String str = stream.collect(Collectors.joining()).toString();
 
-### 3.3 Stream 的操作
+### <span id = "3.3">3.3 Stream 的操作</span>
 
 - 流的操作类型 
     - **Intermediate**：一个流后可有零个或多个 intermediate 操作；
@@ -95,7 +95,7 @@
 
 - 典型操作 [实现](https://github.com/littleYuting/testLambda/blob/master/src/testContainers.java)
 
-参考文献
+4. <span id = "4">参考文献</span>
 
 - [Java 8 中的 Streams API 详解](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/index.html)  
 - [Java8初体验（二）Stream语法详解](http://ifeve.com/stream/)  
