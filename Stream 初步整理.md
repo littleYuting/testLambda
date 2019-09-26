@@ -55,7 +55,7 @@
 
 ### <span id = "2.2">2.2 Stream 的三种包装类</span>
 - 为三种基本数值型提供了对应的 Stream：IntStream、LongStream、DoubleStream；  
-补充：也可用 Stream<Integer>、Stream<Long> >、Stream<Double>，但 boxing 和 unboxing 会很耗时；
+补充：也可用 Stream<Integer>、Stream<Long>、Stream<Double>，但 boxing 和 unboxing 会很耗时；
 ## <span id = "3">3. 流的使用</span>
 
 ### <span id = "3.1">3.1 使用流的一般步骤</span>
